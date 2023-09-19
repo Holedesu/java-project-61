@@ -32,7 +32,7 @@ public class Prime {
                     break;
                 }
             } else if (answer.equals("no")) {
-                if(!isPrime) {
+                if (!isPrime) {
                     System.out.println("Correct!");
                     correctAnswers++;
                 } else {

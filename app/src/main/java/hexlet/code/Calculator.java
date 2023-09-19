@@ -17,7 +17,7 @@ public class Calculator {
 
         while (correctAnswers < roundsToWin) {
             int startDiapason = 1;
-            int randIntDiapason = 30;
+            final int randIntDiapason = 30;
             int number1 = random.nextInt(startDiapason, randIntDiapason);
             int number2 = random.nextInt(startDiapason, randIntDiapason);
             char operator = getRandomOperator();

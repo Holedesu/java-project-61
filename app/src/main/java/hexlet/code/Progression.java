@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class Progression {
     private static int startDiapason = 1;
-    private static int randIntDiapason1 = 100;
-    private static int randIntDiapason2 = 10;
+    final static int randIntDiapason1 = 100;
+    final static int randIntDiapason2 = 10;
     private static int missingNumber;
     public static void main(String[] args) {
         Greet.main(args);
@@ -56,7 +56,7 @@ public class Progression {
     }
 
     private static int[] generateProgression(int number, int step) {
-        int arraySize = 10;
+        final int arraySize = 10;
         int[] progression = new int[arraySize];
         Random random = new Random();
         int randomInt = random.nextInt(startDiapason, randIntDiapason2);

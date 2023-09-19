@@ -9,6 +9,7 @@ public class Gcd {
 
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Find the greatest common divisor of given numbers.");
 
         int correctAnswers = 0;
         final int roundsToWin = 3;

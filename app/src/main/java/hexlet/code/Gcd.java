@@ -13,10 +13,10 @@ public class Gcd {
 
         int correctAnswers = 0;
         final int roundsToWin = 3;
-        int startDiapason1 = 30;
-        int startDiapason2 = 1;
-        int randIntDiapason1 = 60;
-        int randIntDiapason2 = 30;
+        final  int startDiapason1 = 30;
+        final int startDiapason2 = 1;
+        final int randIntDiapason1 = 60;
+        final int randIntDiapason2 = 30;
         Random randomNum1 = new Random();
         Random randomNum2 = new Random();
 

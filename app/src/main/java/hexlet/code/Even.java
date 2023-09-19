@@ -12,12 +12,12 @@ public class Even {
 
         int correctAnswers = 0;
         final int roundsToWin = 3;
-        int startDiapason = 1;
-        int randIntDiapason1 = 100;
+        final int startDiapason = 1;
+        final int randIntDiapason = 100;
         Random random = new Random();
 
         while (correctAnswers < roundsToWin) {
-            int number = random.nextInt(startDiapason, randIntDiapason1);
+            int number = random.nextInt(startDiapason, randIntDiapason);
             System.out.println("Question: " + number);
             System.out.print("Your answer: ");
             String answer = scanner.nextLine();

@@ -5,14 +5,10 @@ import java.util.Scanner;
 
 public class Gcd {
     public static void main(String[] args) {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
+        Greet.main(args);
 
         Scanner scanner = new Scanner(System.in);
-        String name = scanner.nextLine();
 
-        System.out.println("Hello, " + name + "!");
-        System.out.println("Find the greatest common divisor of given numbers.");
 
         int correctAnswers = 0;
         final int roundsToWin = 3;
@@ -32,10 +28,13 @@ public class Gcd {
                 correctAnswers++;
             } else {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + gcd + "'.");
-                System.out.println("Let's try again, " + name + "!");
+                System.out.println("Let's try again, " + Greet.getName() + "!");
                 break;
             }
 
+        }
+        if (correctAnswers == roundsToWin) {
+            System.out.println("Congratulations, " + Greet.getName() + "!");
         }
     }
     private static int findGCD(int number1, int number2) {

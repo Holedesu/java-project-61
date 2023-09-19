@@ -11,6 +11,7 @@ public class App {
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
+        System.out.println("5 - Progression");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
@@ -20,6 +21,7 @@ public class App {
             case "2" -> Even.main(args);
             case "3" -> Calculator.main(args);
             case "4" -> Gcd.main(args);
+            case "5" -> Progression.main(args);
             case "0" -> System.exit(0);
             default -> System.out.println("Invalid number");
         }

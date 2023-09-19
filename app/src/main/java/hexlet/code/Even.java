@@ -3,13 +3,11 @@ import java.util.Random;
 import java.util.Scanner;
 public class Even {
     public static void main(String[] args) {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
+        Greet.main(args);
 
         Scanner scanner = new Scanner(System.in);
-        String name = scanner.nextLine();
 
-        System.out.println("Hello, " + name + "!");
+        System.out.println("Hello, " + Greet.getName() + "!");
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         int correctAnswers = 0;
@@ -32,13 +30,13 @@ public class Even {
                 System.out.println("'" + answer
                         + "' is wrong answer ;(. Correct answer was '"
                         + (isEven ? "yes" : "no") + "'.");
-                System.out.println("Let's try again, " + name + "!");
+                System.out.println("Let's try again, " + Greet.getName() + "!");
                 break;
             }
         }
 
         if (correctAnswers == roundsToWin) {
-            System.out.println("Congratulations, " + name + "!");
+            System.out.println("Congratulations, " + Greet.getName() + "!");
         }
         scanner.close();
     }

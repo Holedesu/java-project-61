@@ -4,13 +4,11 @@ import java.util.Scanner;
 import java.util.Random;
 public class Calculator {
     public static void main(String[] args) {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
 
+        Greet.main(args);
         Scanner scanner = new Scanner(System.in);
-        String name = scanner.nextLine();
 
-        System.out.println("Hello, " + name + "!");
+
         System.out.println("What is the result of the expression?");
 
         int correctAnswers = 0;
@@ -34,7 +32,7 @@ public class Calculator {
             } else {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
                         + expectedAnswer + "'.");
-                System.out.println("Let's try again, " + name + "!");
+                System.out.println("Let's try again, " + Greet.getName() + "!");
                 break;
             }
 
@@ -42,7 +40,7 @@ public class Calculator {
         }
 
         if (correctAnswers == roundsToWin) {
-            System.out.println("Congratulations, " + name + "!");
+            System.out.println("Congratulations, " + Greet.getName() + "!");
         }
     }
 

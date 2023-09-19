@@ -5,8 +5,7 @@ import java.util.Scanner;
 
 public class Progression {
     private static int startDiapason = 1;
-    final static int randIntDiapason1 = 100;
-    final static int randIntDiapason2 = 10;
+
     private static int missingNumber;
     public static void main(String[] args) {
         Greet.main(args);
@@ -19,6 +18,8 @@ public class Progression {
 
         int correctAnswers = 0;
         final int roundsToWin = 3;
+        final int randIntDiapason1 = 100;
+        final int randIntDiapason2 = 10;
         Random random = new Random();
         while (correctAnswers < roundsToWin) {
             int number = random.nextInt(startDiapason, randIntDiapason1);
@@ -59,7 +60,7 @@ public class Progression {
         final int arraySize = 10;
         int[] progression = new int[arraySize];
         Random random = new Random();
-        int randomInt = random.nextInt(startDiapason, randIntDiapason2);
+        int randomInt = random.nextInt(startDiapason, arraySize);
 
         for (int i = 0; i < progression.length; i++) {
             if (i == randomInt) {

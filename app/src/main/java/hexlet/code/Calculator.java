@@ -16,8 +16,10 @@ public class Calculator {
         Random random = new Random();
 
         while (correctAnswers < roundsToWin) {
-            int number1 = random.nextInt(30);
-            int number2 = random.nextInt(30);
+            int startDiapason = 1;
+            int randIntDiapason = 30;
+            int number1 = random.nextInt(startDiapason, randIntDiapason);
+            int number2 = random.nextInt(startDiapason, randIntDiapason);
             char operator = getRandomOperator();
 
             int expectedAnswer = calculateExpression(number1, number2, operator);

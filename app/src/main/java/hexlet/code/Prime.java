@@ -16,7 +16,9 @@ public class Prime {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
         while (correctAnswers < roundsToWin) {
-            int number1 = random.nextInt(100);
+            int startDiapason = 1;
+            int randIntDiapason = 100;
+            int number1 = random.nextInt(startDiapason, randIntDiapason);
 
             System.out.println("Question: " + number1);
             System.out.print("Your answer: ");

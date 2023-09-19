@@ -16,10 +16,13 @@ public class Progression {
 
         int correctAnswers = 0;
         final int roundsToWin = 3;
+        int startDiapason = 1;
+        int randIntDiapason1 = 100;
+        int randIntDiapason2 = 10;
         Random random = new Random();
         while (correctAnswers < roundsToWin) {
-            int number = random.nextInt(100) + 1;
-            int step = random.nextInt(10) + 1;
+            int number = random.nextInt(startDiapason, randIntDiapason1);
+            int step = random.nextInt(startDiapason, randIntDiapason2);
 
             int[] progression = generateProgression(number, step);
             System.out.print("Question: ");

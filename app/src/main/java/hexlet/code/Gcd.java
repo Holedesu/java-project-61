@@ -13,12 +13,16 @@ public class Gcd {
 
         int correctAnswers = 0;
         final int roundsToWin = 3;
+        int startDiapason1 = 30;
+        int startDiapason2 = 1;
+        int randIntDiapason1 = 60;
+        int randIntDiapason2 = 30;
         Random randomNum1 = new Random();
         Random randomNum2 = new Random();
 
         while (correctAnswers < roundsToWin) {
-            int number1 = randomNum1.nextInt(30) + 30;
-            int number2 = randomNum2.nextInt(30);
+            int number1 = randomNum1.nextInt(startDiapason1, randIntDiapason1);
+            int number2 = randomNum2.nextInt(startDiapason2, randIntDiapason2);
             int gcd = findGCD(number1, number2);
             System.out.println("Question: " + number1 + " " + number2);
             System.out.print("Your answer: ");
